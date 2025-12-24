@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-accountingflow}
+      POSTGRES_USER: ${POSTGRES_USER:-accountingflow}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-accountingflow}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  backend:
+    build:
+      context: ./backend
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://accountingflow:accountingflow@db:5432/accountingflow}
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-me}
+      JWT_ALG: ${JWT_ALG:-HS256}
+      JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-720}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173}
+      STORAGE_DIR: ${STORAGE_DIR:-./storage}
+      SEED_ADMIN_USERNAME: ${SEED_ADMIN_USERNAME:-admin}
+      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-admin123}
+      SEED_ACCOUNTANT_USERNAME: ${SEED_ACCOUNTANT_USERNAME:-accountant}
+      SEED_ACCOUNTANT_PASSWORD: ${SEED_ACCOUNTANT_PASSWORD:-accountant123}
+      SEED_MANAGER_USERNAME: ${SEED_MANAGER_USERNAME:-manager}
+      SEED_MANAGER_PASSWORD: ${SEED_MANAGER_PASSWORD:-manager123}
+    volumes:
+      - ./backend:/app
+      - ./storage:/app/storage
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
+
+
