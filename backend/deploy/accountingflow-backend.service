@@ -1,0 +1,26 @@
+[Unit]
+Description=AccountingFlow Backend (FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/accountingflow/backend
+EnvironmentFile=/etc/accountingflow/backend.env
+
+# 建议用项目专用用户运行
+User=accountingflow
+Group=accountingflow
+
+ExecStartPre=/opt/accountingflow/backend/.venv/bin/python -m alembic upgrade head
+ExecStartPre=/opt/accountingflow/backend/.venv/bin/python -m app.scripts.init_db
+
+# 生产建议仅监听本机，由 Nginx 反代
+ExecStart=/opt/accountingflow/backend/.venv/bin/gunicorn app.main:app -k uvicorn.workers.UvicornWorker -w 2 -b 127.0.0.1:8000 --access-logfile - --error-logfile -
+
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
+
