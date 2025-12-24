@@ -1,0 +1,62 @@
+/* 全局蓝色系主题：用于统一按钮/卡片/提示条/背景 */
+
+:root {
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+
+  --bg: #f6f9ff;
+  --surface: #ffffff;
+  --text: #0b1220;
+  --muted: #64748b;
+  --border: #e2e8f0;
+
+  --shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.06);
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+
+  --radius-sm: 10px;
+  --radius: 14px;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: radial-gradient(900px 380px at 18% 8%, rgba(37, 99, 235, 0.18), transparent 60%),
+    radial-gradient(900px 420px at 85% 0%, rgba(96, 165, 250, 0.18), transparent 55%),
+    var(--bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 通用弹窗：限制高度并在弹窗内滚动，避免内容（尤其表格/输入框）撑出弹窗边界 */
+.modal-card {
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+}
+
+/* 统一链接颜色 */
+a {
+  color: var(--primary-700);
+}
+a:hover {
+  color: var(--primary-800);
+}
+
+
