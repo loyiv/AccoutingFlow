@@ -1,0 +1,63 @@
+Requirement already satisfied: pip in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (25.3)
+Requirement already satisfied: fastapi==0.115.6 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 1)) (0.115.6)
+Requirement already satisfied: uvicorn==0.32.1 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (0.32.1)
+Requirement already satisfied: gunicorn==23.0.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 3)) (23.0.0)
+Requirement already satisfied: pydantic==2.10.4 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 4)) (2.10.4)
+Requirement already satisfied: pydantic-settings==2.6.1 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 5)) (2.6.1)
+Requirement already satisfied: SQLAlchemy==2.0.36 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 6)) (2.0.36)
+Requirement already satisfied: alembic==1.14.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 7)) (1.14.0)
+Requirement already satisfied: pymysql==1.1.1 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 9)) (1.1.1)
+Requirement already satisfied: python-jose==3.3.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from python-jose[cryptography]==3.3.0->-r requirements.txt (line 10)) (3.3.0)
+Requirement already satisfied: passlib==1.7.4 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from passlib[bcrypt]==1.7.4->-r requirements.txt (line 11)) (1.7.4)
+Requirement already satisfied: bcrypt==3.2.2 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 13)) (3.2.2)
+Requirement already satisfied: python-multipart==0.0.17 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 14)) (0.0.17)
+Requirement already satisfied: orjson==3.10.12 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 15)) (3.10.12)
+Requirement already satisfied: reportlab==4.2.5 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 16)) (4.2.5)
+Requirement already satisfied: openpyxl==3.1.5 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from -r requirements.txt (line 17)) (3.1.5)
+Requirement already satisfied: starlette<0.42.0,>=0.40.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from fastapi==0.115.6->-r requirements.txt (line 1)) (0.41.3)
+Requirement already satisfied: typing-extensions>=4.8.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from fastapi==0.115.6->-r requirements.txt (line 1)) (4.15.0)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from pydantic==2.10.4->-r requirements.txt (line 4)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.27.2 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from pydantic==2.10.4->-r requirements.txt (line 4)) (2.27.2)
+Requirement already satisfied: click>=7.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn==0.32.1->uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (8.3.1)
+Requirement already satisfied: h11>=0.8 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn==0.32.1->uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (0.16.0)
+Requirement already satisfied: packaging in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from gunicorn==23.0.0->-r requirements.txt (line 3)) (25.0)
+Requirement already satisfied: python-dotenv>=0.21.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from pydantic-settings==2.6.1->-r requirements.txt (line 5)) (1.2.1)
+Requirement already satisfied: greenlet!=0.4.17 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from SQLAlchemy==2.0.36->-r requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: Mako in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from alembic==1.14.0->-r requirements.txt (line 7)) (1.3.10)
+Requirement already satisfied: ecdsa!=0.15 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from python-jose==3.3.0->python-jose[cryptography]==3.3.0->-r requirements.txt (line 10)) (0.19.1)
+Requirement already satisfied: rsa in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from python-jose==3.3.0->python-jose[cryptography]==3.3.0->-r requirements.txt (line 10)) (4.9.1)
+Requirement already satisfied: pyasn1 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from python-jose==3.3.0->python-jose[cryptography]==3.3.0->-r requirements.txt (line 10)) (0.6.1)
+Requirement already satisfied: cffi>=1.1 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from bcrypt==3.2.2->-r requirements.txt (line 13)) (2.0.0)
+Requirement already satisfied: pillow>=9.0.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from reportlab==4.2.5->-r requirements.txt (line 16)) (12.0.0)
+Requirement already satisfied: chardet in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from reportlab==4.2.5->-r requirements.txt (line 16)) (5.2.0)
+Requirement already satisfied: et-xmlfile in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from openpyxl==3.1.5->-r requirements.txt (line 17)) (2.0.0)
+Requirement already satisfied: cryptography>=3.4.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from python-jose[cryptography]==3.3.0->-r requirements.txt (line 10)) (46.0.3)
+Requirement already satisfied: colorama>=0.4 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (0.4.6)
+Requirement already satisfied: httptools>=0.6.3 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (0.7.1)
+Requirement already satisfied: pyyaml>=5.1 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (6.0.3)
+Requirement already satisfied: watchfiles>=0.13 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (1.1.1)
+Requirement already satisfied: websockets>=10.4 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from uvicorn[standard]==0.32.1->-r requirements.txt (line 2)) (15.0.1)
+Requirement already satisfied: anyio<5,>=3.4.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from starlette<0.42.0,>=0.40.0->fastapi==0.115.6->-r requirements.txt (line 1)) (4.12.0)
+Requirement already satisfied: idna>=2.8 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from anyio<5,>=3.4.0->starlette<0.42.0,>=0.40.0->fastapi==0.115.6->-r requirements.txt (line 1)) (3.11)
+Requirement already satisfied: pycparser in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from cffi>=1.1->bcrypt==3.2.2->-r requirements.txt (line 13)) (2.23)
+Requirement already satisfied: six>=1.9.0 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from ecdsa!=0.15->python-jose==3.3.0->python-jose[cryptography]==3.3.0->-r requirements.txt (line 10)) (1.17.0)
+Requirement already satisfied: MarkupSafe>=0.9.2 in c:\users\lenovo\desktop\会计软件\main\backend\.venv\lib\site-packages (from Mako->alembic==1.14.0->-r requirements.txt (line 7)) (3.0.3)
+[backend] migrate...
+[backend] seed...
+[backend] verify import...
+app.main= C:\Users\Lenovo\Desktop\会计软件\main\backend\app\main.py
+docs_url= None
+openapi_url= /openapi.json
+[backend] start uvicorn...
+INFO:     127.0.0.1:32820 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32820 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32841 - "GET /health/db HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32867 - "POST /auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32867 - "GET /books HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32867 - "GET /periods?book_id=fefd55c9-e5e2-48be-b7e4-5c77d1adf833 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32867 - "GET /gl/drafts?period=c344317d-258a-48bd-9056-26ed5631e362 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32915 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59878 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59878 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:42111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2882 - "GET /docs HTTP/1.1" 200 OK
